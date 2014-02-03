@@ -50,7 +50,7 @@
                     <p class="lead">When the going gets tough...<br>the tough become <em>cage fighters</em></p>
                 </div>
                 <!-- Begin Form -->
-                <form role="form" id="fighterForm">
+                <form role="form fighterForm">
                     <div class="form-group">
                         <label class="sr-only" for nameInput>Name</label>
                         <input type="text" class="form-control input-lg" id="firstNameInput" placeholder="Gimme' yo first name" name="firstName"value="">
@@ -115,38 +115,77 @@
                         Able to understand every language but can only read &amp; write in Swahili.
                       </label>
                     </div>
-                    <button type="submit" class="btn btn-danger btn-block btn-lg submit">Let's Go!</button>
+                    <button type="submit" class="btn btn-bloody btn-block btn-lg submit">Let's Go!</button>
                 </form>
             </div>
 
             <!-- Right Column Info -->
-            <div class="right-content col-md-7 panel">
+            <div class="right-content col-md-7">
                 <div class="row">
+                    <!-- New Profile -->
                     <div class="profile-card panel panel-body">
                         <div class="fighter-profile-name panel-heading">
-                        <h3>Yo Name Goes Here</h3>
+                        <h3>Jimmy "The Mean Bean" Dean</h3>
                         </div>
                         <div class="profile-card-body">
                             <div class="fighter-image col-md-4">
                                 <img src="images/Mask1c.jpg" class="avatar1">
                             </div>
                             <div class="fighter-info col-md-8">
-                                <blockquote>Fighter's Quote</blockquote>
+                                <blockquote>I don't just scorch breakfast food.</blockquote>
                                 <ul class="list-group">
-                                    <li class="list-group-item">Would Rather Answer One</li>
-                                    <li class="list-group-item">Would Rather Answer One</li>
-                                    <li class="list-group-item">Would Rather Answer One</li>
+                                    <li class="list-group-item">
+                                        <h4 class="list-group-item-heading">Super Power</h4>
+                                        <p>Would Rather Answer One<p>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <h4 class="list-group-item-heading">Hobby</h4>
+                                        <p>Would Rather Answer Two<p></li>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <h4 class="list-group-item-heading">Special Ability</h4>
+                                        <p>Would Rather Answer Three<p>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    <!-- New Profile -->
+                    <div class="profile-card panel panel-body">
+                        <div class="fighter-profile-name panel-heading">
+                        <h3>Betty "The Snake" White</h3>
+                        </div>
+                        <div class="profile-card-body">
+                            <div class="fighter-image col-md-4">
+                                <img src="images/Mask2c.jpg" class="avatar2">
+                            </div>
+                            <div class="fighter-info col-md-8">
+                                <blockquote>Take care of your pets or I'll groin you.</blockquote>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <h4 class="list-group-item-heading">Super Power</h4>
+                                        <p>Would Rather Answer One<p>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <h4 class="list-group-item-heading">Hobby</h4>
+                                        <p>Would Rather Answer Two<p></li>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <h4 class="list-group-item-heading">Special Ability</h4>
+                                        <p>Would Rather Answer Three<p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
 <!-- Footer Section -->
         <div class="container">
             <div class="footer">
-                <p>♥ from the Yeoman team</p>
+                <p>Crafted with love &amp; thoughtfulness by ColorTurtle</p>
             </div>
         </div>
 
@@ -186,6 +225,40 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <!-- Begin template script -->
+        <script type="text/javascript" id="profiletmpl">
+            <div class="profile-card panel panel-body">
+                <div class="fighter-profile-name panel-heading">
+                <h3>firstName randomName lastName</h3>
+                </div>
+                <div class="profile-card-body">
+                    <div class="fighter-image col-md-4">
+                        randomAvatar
+                    </div>
+                    <div class="fighter-info col-md-8">
+                        <blockquote>fightinWords</blockquote>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <h4 class="list-group-item-heading">Super Power</h4>
+                                <p>answerWYR<p>
+                            </li>
+                            <li class="list-group-item">
+                                <h4 class="list-group-item-heading">Hobby</h4>
+                                <p>answerWYRo<p></li>
+                            </li>
+                            <li class="list-group-item">
+                                <h4 class="list-group-item-heading">Special Ability</h4>
+                                <p>answerWYR<p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </script>
+
+
+
         <!-- endbuild -->
 </body>
 </html>
