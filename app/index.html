@@ -229,14 +229,14 @@
         <script type="text/javascript" id="profiletmpl">
             <div class="profile-card panel panel-body">
                 <div class="fighter-profile-name panel-heading">
-                <h3>Variables firstName randomName lastName</h3>
+                <h3><%=firstname%> <%=nickname%> <%=lastname%></h3>
                 </div>
                 <div class="profile-card-body">
-                    <div class="fighter-image col-md-4">
-                        Variable randomAvatar
+                    <div class="fighter-image col-md-4"><img src=<%=avatar%> class="avatar1">
+                        
                     </div>
                     <div class="fighter-info col-md-8">
-                        <blockquote>Variable fightinWords</blockquote>
+                        <blockquote> <%=fightinWords%></blockquote>
                         <ul class="list-group">
                             <li class="list-group-item">
                                 <h4 class="list-group-item-heading">Super Power</h4>

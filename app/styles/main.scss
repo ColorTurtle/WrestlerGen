@@ -3,8 +3,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 @import 'sass-bootstrap/lib/bootstrap';
 
 // Mixin for Avatar formatting
-@mixin roundImg ($img) {
-    background: image_url($img) no-repeat center center;
+@mixin roundImg () {
     width: 150px;
     margin-top: 0px;
     height:150px;
@@ -14,19 +13,19 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 }
 
 .avatar1 {
-    @include roundImg("Mask1c.jpg");
+    @include roundImg();
 }
 
 .avatar2 {
-    @include roundImg("Mask2c.jpg");
+    @include roundImg();
  }
 
  .avatar3 {
-    @include roundImg("Mask3c.jpg");
+    @include roundImg();
  }
 
  .avatar4 {
-    @include roundImg("Mask4c.jpg");
+    @include roundImg();
  }
 
 
@@ -67,10 +66,12 @@ h1,h2,h3,h4,h5 {
         margin-bottom: 0;
         line-height: 40px;
         padding-bottom: 19px;
+        padding-left: 15px;
     }
     li {
         line-height: 40px; 
         color: white;
+        padding-right: 15px;
     }
 
 }
@@ -78,6 +79,10 @@ h1,h2,h3,h4,h5 {
 .bloody {
     font-family: 'Trade Winds', cursive;
     color: rgb(179, 23, 23);
+}
+
+.panel {
+    box-shadow: 0px 0px 0px white;
 }
 
 .left-content {
@@ -109,6 +114,7 @@ h1,h2,h3,h4,h5 {
 .right-content {
 
     .profile-card {
+        border: 1px solid #eeeeee;
 
         &:hover {
             background-color: #eeeeee;
