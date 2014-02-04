@@ -32,7 +32,7 @@
         <div class="header">
             <div class="container">
                 <ul class="nav nav-pills pull-right">
-                    <li class="active">Search</li>
+                    <li class="active"></li>
                 </ul>
                 <h3 class="text-muted">The Iron <span class="bloody">CAGE<span></h3>
             </div>
@@ -50,7 +50,7 @@
                     <p class="lead">When the going gets tough...<br>the tough become <em>cage fighters</em></p>
                 </div>
                 <!-- Begin Form -->
-                <form role="form fighterForm">
+                <form role="form fighterForm" id="jsFighterForm">
                     <div class="form-group">
                         <label class="sr-only" for nameInput>Name</label>
                         <input type="text" class="form-control input-lg" id="firstNameInput" placeholder="Gimme' yo first name" name="firstName"value="">
@@ -61,51 +61,51 @@
                     <h2>Would you rather have the superpower of... ?</h2>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="optionsRadios1" id="set1option1" value="Can fly during farting." checked>
+                        <input type="radio" name="optionsRadiosOne" id="set1option1" value="Can fly during farting."checked>
                         Can fly during farting.
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="optionsRadios1" id="set1option2" value="Can turn invisible when urinating." checked>
+                        <input type="radio" name="optionsRadiosOne" id="set1option2" value="Can turn invisible when urinating.">
                         Can turn invisible when urinating.
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="optionsRadios1" id="set1option3" value="Can see in x-ray when belching.">
+                        <input type="radio" name="optionsRadiosOne" id="set1option3" value="Can see in x-ray when belching.">
                         Can see in x-ray when belching.
                       </label>
                     </div>
                     <h2>Would you rather?</h2>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="optionsRadios2" id="set2option1" value="Love to live in the past but with no memory of the present." checked>
+                        <input type="radio" name="optionsRadiosTwo" id="set2option1" value="Love to live in the past but with no memory of the present."checked>
                         Love to live in the past but with no memory of the present.
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="optionsRadios2" id="set2option2" value="Love to live in the future but with no memory of the past." checked>
+                        <input type="radio" name="optionsRadiosTwo" id="set2option2" value="Love to live in the future but with no memory of the past.">
                         Love to live in the future but with no memory of the past.
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="optionsRadios2" id="set2option3" value="Love to live in the present but with split personalities.">
+                        <input type="radio" name="optionsRadiosTwo" id="set2option3" value="Love to live in the present but with split personalities.">
                         Love to live in the present but with split personalities.
                       </label>
                     </div>
                     <h2>Would you rather be... ?</h2>
                      <div class="radio">
                       <label>
-                        <input type="radio" name="optionsRadios3" id="set3option1" value="Able to read every language but can't write them." checked>
+                        <input type="radio" name="optionsRadios3" id="set3option1" value="Able to read every language but can't write them."checked>
                         Able to read every language but can't write them. 
                       </label>
                     </div>
                    <div class="radio">
                       <label>
-                        <input type="radio" name="optionsRadios3" id="set3option2" value="Able to write in every language but can't understand them." checked>
+                        <input type="radio" name="optionsRadios3" id="set3option2" value="Able to write in every language but can't understand them.">
                         Able to write in every language but can't understand them.
                       </label>
                     </div>
@@ -121,7 +121,7 @@
 
             <!-- Right Column Info -->
             <div class="right-content col-md-7">
-                <div class="row">
+                <div class="row profile-column">
                     <!-- New Profile -->
                     <div class="profile-card panel panel-body">
                         <div class="fighter-profile-name panel-heading">
@@ -226,7 +226,7 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- Begin template script -->
-        <script type="text/javascript" id="profiletmpl">
+        <script type="text/template" id="profiletmpl">
             <div class="profile-card panel panel-body">
                 <div class="fighter-profile-name panel-heading">
                 <h3><%=firstname%> <%=nickname%> <%=lastname%></h3>
@@ -236,19 +236,20 @@
                         
                     </div>
                     <div class="fighter-info col-md-8">
-                        <blockquote> <%=fightinWords%></blockquote>
+                        <blockquote> ''<%=fightinWords%>''
+                        </blockquote>
                         <ul class="list-group">
                             <li class="list-group-item">
                                 <h4 class="list-group-item-heading">Super Power</h4>
-                                <p>Variable answerWYR<p>
+                                <p><%=ratherFirst%></p><p>test</p>
                             </li>
                             <li class="list-group-item">
                                 <h4 class="list-group-item-heading">Hobby</h4>
-                                <p>Variable answerWYRo<p></li>
+                                <p><%=ratherSecond%></p><p>test</p>
                             </li>
                             <li class="list-group-item">
                                 <h4 class="list-group-item-heading">Special Ability</h4>
-                                <p>Variable answerWYR<p>
+                                <p><%=ratherThird%></p><p>test</p>
                             </li>
                         </ul>
                     </div>
