@@ -62,7 +62,7 @@ $('.submit').click(function(){
 
 	$('#jsFighterForm').trigger("reset");
 
-	event.preventDefault();
+	// event.preventDefault();
 });
 
 // Constructor
