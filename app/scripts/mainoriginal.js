@@ -76,3 +76,5 @@ function Wrestler (firstname, lastname, fightinWords, nickname, avatar, ratherFi
 	this.ratherSecond = ratherSecond;
 	this.ratherThird = ratherThird;
 };
+
+
