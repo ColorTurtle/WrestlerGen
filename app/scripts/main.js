@@ -23,46 +23,34 @@ var fighterNickNames = [
 	"'The Looping Lunatic'"
 ];
 
-// Would You Rather Question One
- $('.jsQuestionOne').click(function() {
-	$('input[name=wouldYouRatherOne]:checked', '#jsFighterForm').val()
-    });
-
-// Would You Rather Question Two
- $('.jsQuestionTwo').click(function() {
-	$('input[name=wouldYouRatherTwo]:checked', '#jsFighterForm').val()
-    });
-
-// Would You Rather Question Three
- $('.jsQuestionThree').click(function() {
-	$('input[name=wouldYouRatherThree]:checked', '#jsFighterForm').val()
-    });
-
-
-
-
 
 $('.submit').click(function(){
-	console.log('Booya!');
+	// console.log('Booya!');
 
 	// Grab the input data from the form
 	var firstname = $('input[name=firstName]').val();
 	var lastname = $('input[name=lastName]').val();
 	var fightinWords = $('input[name=fightinWords]').val();
-	var ratherFirst = $('input[name=wouldYouRatherOne]').val();
-	var ratherSecond = $('input[name=wouldYouRatherTwo]').val();
-	var ratherThird = $('input[name=wouldYouRatherThree]').val();
+	var ratherFirst = $('input[name=wouldYouRatherOne]:checked').val();
+	var ratherSecond = $('input[name=wouldYouRatherTwo]:checked').val();
+	var ratherThird = $('input[name=wouldYouRatherThree]:checked').val();
+	// console.log('Inputs grabbed');
+	console.log(ratherFirst);
+	console.log(ratherSecond);
+	console.log(ratherThird);
 
 	// Gather the input data into a single array via the constructor
-	var wrestlerprofile = new Wrestler (firstname, lastname, fightinWords, ratherFirst, ratherSecond, ratherThird);
+	var wrestlerprofile = new Wrestler(firstname, lastname, fightinWords, ratherFirst, ratherSecond, ratherThird);
+	console.log(wrestlerprofile);
 
-	var wrestlerTemplate = _.template ($('#wrestlerTemplate').text());
+	var wrestlerTemplate = _.template($('#wrestlerTemplate').text());
+	// console.log('connecting the Constructor to template.');
+	console.log(wrestlerTemplate)
 
 	$('.profile-column').prepend(wrestlerTemplate(wrestlerprofile));
 
-	$('#jsFighterForm').trigger("reset");
+	$('.jsFighterForm').trigger("reset");
 
-	// event.preventDefault();
 });
 
 // Constructor
